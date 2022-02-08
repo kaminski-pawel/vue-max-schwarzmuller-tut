@@ -1,0 +1,13 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div id="app">
+  <button v-on:click="increase(2, $event)">Btn</button>
+  <button v-on:click="counter++">Btn</button>
+  <p>{{ counter * 2 }} is {{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+
+  
+  <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} |
+  <span v-on:mousemove="stpProp">DEAD SPOT</span> | active |
+  <span v-on:mousemove.stop="">ANOTHER DEAD SPOT</span>
+  </p>
+  <input type="text" v-on:keyup.enter.space="alertMe">
+</div>
